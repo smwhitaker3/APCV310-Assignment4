@@ -1,0 +1,101 @@
+/*
+    Assignment Name: Assignment #4 - Web Development
+
+    File Name   : project1.css
+
+    Purpose     : External stylesheet for project1.html
+
+    Site Author : Shane Whitaker
+
+    Last Modified Date : 3/27/2025
+
+    for University of Arizona online course APCV 310 Spring 2025 section 204
+*/
+
+/* Body styling */
+body {
+    background-color: white;
+    font-family: Georgia, Garamond, serif;
+    font-size: 14pt;
+    color: #333333;
+    margin: 40px;
+  }
+  
+  /* Main Heading (h1) */
+  h1 {
+    text-align: center;
+    font-size: 28pt;
+    font-weight: bold;
+    text-decoration: underline;
+    font-family: Verdana, "Century Gothic", Futura, sans-serif;
+    color: #1a237e;
+    background-color: #e8eaf6;
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  }
+  
+  /* Section Headings (h2) */
+  h2 {
+    text-align: left;
+    font-size: 20pt;
+    font-weight: normal;
+    text-decoration: underline;
+    font-family: Verdana, "Century Gothic", Futura, sans-serif;
+    color: #0d47a1;
+    background-color: #fff59d;
+    padding: 8px;
+    margin-top: 30px;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  }
+  
+  /* Images */
+  img {
+    display: block;
+    margin: 12px auto;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #aaa;
+    padding: 5px;
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+  
+  /* Links */
+  a {
+    color: #0d47a1;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Home link at bottom */
+  .home-link {
+    display: block;
+    text-align: center;
+    font-size: 18pt;
+    margin-top: 40px;
+  }
+  
+  /* Lists */
+  ul {
+    padding-left: 30px;
+  }
+  
+  /* Paragraphs */
+  p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  
+  /*Horizontal rule for visual break */
+  hr {
+    margin: 40px 0;
+    border: none;
+    border-top: 2px solid #ccc;
+  }
+  

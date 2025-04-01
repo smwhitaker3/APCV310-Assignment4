@@ -1,0 +1,100 @@
+<!--
+    Assignment Name: Assignment #4 - Web Development
+
+    File Name   : project1.html
+
+    Purpose     : Detailed description of the Fallout 76 Plan Companion project
+
+    Site Author : Shane Whitaker
+
+    Last Modified Date : 3/27/2025
+
+    for University of Arizona online course APCV 310 Spring 2025 section 204
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fallout 76 Vendor Automation Project</title>
+  <link rel="stylesheet" type="text/css" href="project1.css">
+</head>
+<body>
+
+  <!-- Project Title -->
+<h1>Fallout 76 Vendor Automation Project</h1>
+
+  <!-- Introduction Section -->
+<h2>Introduction</h2>
+  <p>
+    This project, which I created recently (March 2025) in my spare time, automates the process of managing and pricing vendor-sellable plans in Fallout 76, a game which I play regularly on Xbox. Many players (myself included) keep large inventories of plans, but manually checking prices and tracking them is tedious and time-consuming. I created this tool to streamline that process by combining image recognition, data scraping, and simple automation into one console-based application. The app would be potentially useful for bulk sellers who frequently update their in-game vendor stock and want consistent, up-to-date pricing suggestions. As of yet, I haven't distributed it online, nor updated it to be compatible with any computer outside of my own, but the possibility to do so is always there. Then again, I question whether many players would find as much utility in this tool as I have…
+  </p>
+
+  <!-- Key Features Section -->
+<h2>Key Features</h2>
+  <ul>
+    <li>Captures and processes inventory screenshots using OCR</li>
+    <li>Applies image preprocessing to enhance text readability</li>
+    <li>Scrapes the FED76 website to build a local pricing database</li>
+    <li>Matches detected plans against FED76 data and suggests prices</li>
+    <li>Displays all results in a simple Windows console interface</li>
+  </ul>
+
+  <p>
+    <img src="https://i.imgur.com/l5n6RWd.png" alt="Screenshot of the Fallout 76 Plan Companion console interface" width="500">
+  </p>
+
+  <!-- How It Works Section -->
+<h2>How It Works</h2>
+  <p>
+    The program begins when the user initiates an inventory capture from the menu.
+    Using the Xbox app’s remote play feature, a screenshot of the in-game inventory 
+    is taken on the PC. AutoHotkey macros are used to override the default screenshot save 
+    location so that the app can access the file immediately. Before OCR (Optical Character Recognition) 
+    begins, the screenshot is cropped, brightened, and contrast-enhanced using the 
+    <a href="https://sixlabors.com/products/imagesharp/" target="_blank">SixLabors.ImageSharp</a> 
+    library to improve text recognition accuracy. Then, Tesseract OCR extracts text from the processed image. 
+    Each recognized plan name is compared against a local pricing database created by scraping data from the 
+    <a href="https://fed76.info/plans" target="_blank">FED76 Plan Database</a>. Finally, the results — including 
+    plan names, price ranges, and suggested prices — are displayed in a clear tabular format.
+  </p>
+
+  <p>
+    <strong>Raw Screenshot:</strong><br>
+    <img src="https://i.imgur.com/wLnLGDr.png" alt="Raw screenshot of Fallout 76 inventory screen" width="400"><br><br>
+
+    <strong>Preprocessed Image:</strong><br>
+    <img src="https://i.imgur.com/DEGcw57.png" alt="Preprocessed screenshot with improved contrast and cropping before OCR" width="400"><br><br>
+
+    <strong>Final Output with Suggested Prices:</strong><br>
+    <img src="https://i.imgur.com/qCuX3fV.png" alt="Console output showing plan names, price ranges, and suggested prices" width="500">
+  </p>
+
+  <!-- Tools Used Section -->
+<h2>Tools Used</h2>
+  <ul>
+    <li><a href="https://visualstudio.microsoft.com/" target="_blank">Visual Studio 2022</a> – development environment</li>
+    <li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/" target="_blank">C#</a> – main application code</li>
+    <li><a href="https://github.com/tesseract-ocr/tesseract" target="_blank">Tesseract OCR</a> – for reading text from images</li>
+    <li><a href="https://sixlabors.com/products/imagesharp/" target="_blank">SixLabors.ImageSharp</a> – for image preprocessing</li>
+    <li><a href="https://www.autohotkey.com/" target="_blank">AutoHotkey</a> – for screenshot automation and file management</li>
+    <li><a href="https://html-agility-pack.net/" target="_blank">HtmlAgilityPack</a> – used to scrape FED76 pricing data</li>
+    <li><a href="https://www.json.org/json-en.html" target="_blank">JSON</a> – used to store settings and local price data</li>
+    <li><a href="https://www.xbox.com/en-US/apps/xbox-app-for-windows-10" target="_blank">Xbox App for PC</a> – to remotely capture screenshots</li>
+  </ul>
+
+  <!-- Credits and Resources -->
+<h2>Credits & Links</h2>
+  <p>
+    This project uses data from the community-maintained <a href="https://fed76.info/plans" target="_blank">FED76 Plan Database</a>.<br><br>
+    <a href="https://fed76.info/plans" target="_blank">
+      <img src="https://i.imgur.com/bA6jdwR.png" alt="The Plan Collectors logo from FED76" width="150">
+    </a>
+  </p>
+
+  <hr>
+
+  <!-- Link Back to Home Page -->
+<p class="home-link"><a href="index.html">Home</a></p>
+
+</body>
+</html>
